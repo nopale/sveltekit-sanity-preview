@@ -24,7 +24,7 @@
 				<p>{post.excerpt}</p>
 
 				<!-- svelte-ignore a11y_consider_explicit_label -->
-				<a href="/posts/{post.slug?.current}"> Link to the post</a>
+				<a href="/posts/{post.slug?.current}"> <button>Link to the post</button></a>
 			</section>
 		{/each}
 	{/if}
