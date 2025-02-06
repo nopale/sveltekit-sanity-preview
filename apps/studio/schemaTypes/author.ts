@@ -24,6 +24,6 @@ export default {
       title: 'array',
       type: 'array',
       of: [{ type: 'block' }]
-    }
+    },
   ]
 }

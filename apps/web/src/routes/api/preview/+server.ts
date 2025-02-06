@@ -9,6 +9,8 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		throw error(401, 'Invalid token');
 	}
 
+	console.log(cookies)
+
 	cookies.set('preview-mode', 'true', {
 		path: '/',
 		httpOnly: true,

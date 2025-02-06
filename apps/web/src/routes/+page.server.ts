@@ -5,19 +5,10 @@ import { querySanity } from '$lib/utils/sanity';
 import type { Homepage } from '$lib/types';
 
 export const load: PageServerLoad = async ({ cookies }) => {
-	// 	const isPreview = cookies.get('preview-mode') === 'true';
-	// 	const currentClient = isPreview ? getPreviewClient(PRIVATE_PREVIEW_TOKEN) : client;
+	const isPreview = cookies.get('preview-mode') === 'true';
+	const currentClient = isPreview ? getPreviewClient(PRIVATE_PREVIEW_TOKEN) : client;
 
-	// // 	const homepage = await currentClient.fetch(`*[_type == "homepage"][0]{
-	// //     ...,
-	// //     "featuredPosts": featuredPosts[]->{
-	// //       title,
-	// //       slug,
-	// //       excerpt,
-	// //       mainImage,
-	// //       publishedAt
-	// //     }
-	// //   }`);
+	console.log(isPreview)
 
 	const homepage = await querySanity<Homepage>(
 		cookies,
